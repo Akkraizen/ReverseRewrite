@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "reverserewrite"
 version = "0.1.0"
-description = "The rewrited version of my first programm - Bot with name Reverse, which made for my own discord server!"
+description = "The rewrited version of my first programm - Bot with name Reverse, which made for my own discord server."
 authors = ["KiNgchev"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.12"
 
 
 [build-system]
