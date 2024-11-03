@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "reverserewrite"
 version = "0.1.0"
-description = "The rewrited version of my first programm - Bot with name Reverse, which made for my own discord server."
+description = "The rewrote version of my first programm - Bot with name Reverse, which made for my own discord server."
 authors = ["KiNgchev"]
 readme = "README.md"
 
