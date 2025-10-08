@@ -1,9 +1,10 @@
-from reverse.utils.Logger import setup_logger
+from reverse.core.ReverseBot import ReverseBot
+from reverse.utils.logger import setup_logger
 
 
 def main() -> None:
     setup_logger()
-    # TODO: Start a bot
+    ReverseBot().run()
 
 if __name__ == "__main__":
     main()

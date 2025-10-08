@@ -10,9 +10,12 @@ readme = "README.md"
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "loguru (>=0.7.3,<0.8.0)",
-    "discord-py (>=2.6.3,<3.0.0)"
+    "discord-py (>=2.6.3,<3.0.0)",
+    "poetry-core (>=2.0.0)"
 ]
 
+[tool.poetry]
+packages = [{ include = "reverse" }]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
