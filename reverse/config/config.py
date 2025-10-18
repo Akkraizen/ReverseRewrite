@@ -1,10 +1,17 @@
 import json
-from typing import Any, Optional
+
+from reverse.structure.singleton import Singleton
 
 
-def load_config() -> Optional[dict[str, Any]]:
-    result = {}
-    with open("../config/config.json", mode="r") as config:
-        result.update(json.load(config))
-        config.close()
-    return result
+class Config(Singleton):
+    def __init__(self):
+        if not self.created:
+            config = {}
+            with open("../config/config.json", mode="r") as configfile:
+                config.update(json.load(configfile))
+                configfile.close()
+
+            self.token = config["token"]
+
+def load_config() -> Config:
+    return Config()

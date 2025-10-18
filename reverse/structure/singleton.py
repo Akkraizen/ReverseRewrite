@@ -10,4 +10,9 @@ class Singleton:
 
     @property
     def created(self) -> bool:
-        return self.__created
+        if not self.__created:
+            self.__created = True
+            return False
+        else:
+            return True
+

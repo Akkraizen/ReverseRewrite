@@ -1,4 +1,4 @@
-from reverse.core.ReverseBot import ReverseBot
+from reverse.core.reverse_bot import ReverseBot
 from reverse.utils.logger import setup_logger
 
 

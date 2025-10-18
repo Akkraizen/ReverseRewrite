@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 from discord.ext.commands.cog import Cog
 
-from reverse.core.ReverseBot import ReverseBot
+from reverse.core.reverse_bot import ReverseBot
 
 
 class Events(Cog):
@@ -11,10 +11,10 @@ class Events(Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        await self.bot.change_presence( #Установление активности
-            activity=discord.Streaming( #стрим
-                name=f'<r.help>', #имя стрима
-                url='https://www.twitch.tv/rf'#ссылка на стрим
+        await self.bot.change_presence(
+            activity=discord.Streaming(
+                name=f'<r.help>',
+                url='https://www.twitch.tv/rf'
             )
         )
 
