@@ -12,6 +12,14 @@ class Config(Singleton):
                 configfile.close()
 
             self.token = config["token"]
+            self.__set_developers(config)
+
+    def __set_developers(self, config: dict):
+        if "developers" in config:
+            developers = config["developers"]
+        else:
+            developers = []
+        self.developers = developers
 
 def load_config() -> Config:
     return Config()

@@ -1,3 +1,7 @@
 {
   "token": "put your token here"
+  "developers": [
+    123, # put your account id
+    231
+  ]
 }
