@@ -2,21 +2,16 @@
 name = "reverserewrite"
 version = "0.1.0"
 description = "The rewrote version of my first programm - Bot with name Reverse, which made for my own discord server."
-authors = [
-    {name = "kiNgchev",email = "kingchev.net@gmail.com"}
-]
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 readme = "README.md"
 requires-python = ">=3.13,<3.14"
 dependencies = [
     "loguru (>=0.7.3,<0.8.0)",
-    "discord-py (>=2.6.3,<3.0.0)",
-    "poetry-core (>=2.0.0)"
 ]
 
-[tool.poetry]
-packages = [{ include = "reverse" }]
+[tool.uv]
+package = false
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["uv_build>=0.12.21,<0.13"]
+build-backend = "uv_build"
