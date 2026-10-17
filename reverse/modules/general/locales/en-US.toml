@@ -1,0 +1,9 @@
+[ping]
+title = "Pong!"
+rest = "REST"
+gateway = "WebSocket"
+milliseconds = "{value} ms"
+unknown = "no data"
+
+[commands.ping]
+description = "Bot latency: REST and WebSocket"

@@ -1,0 +1,9 @@
+**
+!pyproject.toml
+!uv.lock
+!reverse/
+!reverse/**
+!migrations/
+!migrations/**
+**/__pycache__/
+**/*.py[cod]

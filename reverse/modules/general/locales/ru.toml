@@ -1,0 +1,9 @@
+[ping]
+title = "Понг!"
+rest = "REST"
+gateway = "WebSocket"
+milliseconds = "{value} мс"
+unknown = "нет данных"
+
+[commands.ping]
+description = "Задержка бота: REST и WebSocket"

@@ -1,0 +1,125 @@
+[denied]
+missing_permission = "You don't have permission for this action."
+self_moderation = "You can't sanction yourself."
+bot_target = "You can't sanction a bot."
+guild_owner_target = "You can't sanction the server owner."
+role_hierarchy = "The member's role is not lower than yours."
+invalid_duration = "A mute must last from 1 minute to {days} days."
+invalid_amount = "The number of messages must be from 1 to {amount}."
+
+[errors]
+title = "Not done"
+forbidden = "Discord rejected the action: the bot lacks permissions or its role is not above the member's."
+invalid_record = "Invalid data: the reason must not be empty."
+unexpected = "Something went wrong. Details are in the log."
+
+[common]
+reason = "Reason"
+not_persisted = "The record could not be saved."
+outside_bot = "issued outside the bot"
+no_reason = "no reason"
+inactive = " (inactive)"
+history = "**History:**"
+more = "…and {count} more."
+record = "#{id} {created} by {moderator}: {reason}{state}"
+
+[warn]
+title = "Warning #{id}"
+issued = "{member} receives a warning."
+active = "Active warnings"
+limit_reached = "Limit reached"
+limit_muted = "Muted until {until}, warnings cleared."
+limit_muted_kept = "Muted until {until}, but the warnings could not be cleared."
+limit_mute_failed = "Could not mute. {forbidden}"
+not_found_title = "Warning not found"
+not_found = "{member} has no warning #{id}."
+removed_title = "Warning removed"
+removed = "#{id} lifted from {member}."
+list_title = "Warnings"
+none = "{member} has no warnings."
+member = "Member: {member}"
+cleared_title = "Warnings lifted"
+cleared = "Warnings lifted from {member}: {count}."
+
+[mute]
+title = "Mute"
+issued = "{member} is muted until {until}."
+removed_title = "Mute lifted"
+removed = "{member} is no longer muted."
+status_title = "Mute status"
+not_muted = "{member} is not muted."
+muted = "{member} is muted until {until}: {reason}"
+record = "#{id} {created} by {moderator} until {until}: {reason}{state}"
+
+[ban]
+title = "Ban"
+banned = "{user} is banned."
+not_banned = "{user} is not banned."
+removed_title = "Ban lifted"
+removed = "{user} is unbanned."
+active_title = "Active bans"
+none_active = "No active bans."
+list_title = "Bans"
+active_record = "{user} #{id} {created} by {moderator}: {reason}"
+outside_record = "{user}: {reason} ({outside})"
+
+[kick]
+title = "Kick"
+issued = "{member} was kicked from the server."
+
+[clear]
+title = "Clear"
+deleted = "Messages deleted: {count}."
+nothing = "No matching messages found."
+reached_old = "Discord doesn't allow bulk-deleting messages older than 14 days, so the search stopped at them."
+
+[options]
+member = "Member"
+user = "User"
+reason = "Reason"
+
+[commands.warn]
+description = "Warn a member"
+options.days = "Days until the warning expires"
+
+[commands.unwarn]
+description = "Lift a warning"
+options.warn_id = "Warning number"
+
+[commands.warns]
+description = "A member's warnings"
+
+[commands.clearwarns]
+description = "Lift all warnings"
+
+[commands.mute]
+description = "Mute a member (timeout)"
+options.minutes = "Duration in minutes"
+
+[commands.unmute]
+description = "Lift a mute"
+
+[commands.mutes]
+description = "Mute status and mute history"
+
+[commands.ban]
+description = "Ban a member"
+
+[commands.unban]
+description = "Unban a user"
+
+[commands.bans]
+description = "List bans"
+options.user = "Show all bans of this user"
+
+[commands.kick]
+description = "Kick a member"
+
+[commands.clear]
+description = "Delete messages in the channel"
+options.amount = "How many messages to delete"
+options.user = "Only messages from this user"
+options.bots = "Only messages from bots"
+options.contains = "Only messages containing this text"
+options.links = "Only messages with links"
+options.attachments = "Only messages with attachments"

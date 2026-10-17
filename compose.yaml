@@ -1,0 +1,40 @@
+services:
+  bot:
+    build:
+      context: .
+      target: runtime
+    restart: unless-stopped
+    init: true
+    environment:
+      TOKEN: ${TOKEN:?Set TOKEN in .env}
+      DATABASE_URL: postgresql+asyncpg://reverse@db:5432/reverse
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      LOG_DIR: /logs
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - bot_logs:/logs
+    stop_grace_period: 30s
+
+  db:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: reverse
+      POSTGRES_USER: reverse
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "${POSTGRES_HOST:-127.0.0.1}:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+volumes:
+  postgres_data:
+  bot_logs:

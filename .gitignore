@@ -212,3 +212,8 @@ fabric.properties
 pyvenv.cfg
 pip-selfcheck.json
 config/config.json
+# Local moderation database
+reverse.db
+reverse.db-*
+# Bot logs (LOG_DIR)
+logs/

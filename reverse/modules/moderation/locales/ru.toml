@@ -1,0 +1,125 @@
+[denied]
+missing_permission = "У вас нет прав на это действие."
+self_moderation = "Нельзя применить санкцию к себе."
+bot_target = "Нельзя применить санкцию к боту."
+guild_owner_target = "Нельзя применить санкцию к владельцу сервера."
+role_hierarchy = "Роль участника не ниже вашей."
+invalid_duration = "Срок мута должен быть от 1 минуты до {days} дней."
+invalid_amount = "Количество сообщений должно быть от 1 до {amount}."
+
+[errors]
+title = "Не выполнено"
+forbidden = "Discord отклонил действие: у бота нет прав или его роль не выше роли участника."
+invalid_record = "Некорректные данные: причина не должна быть пустой."
+unexpected = "Произошла ошибка. Подробности в журнале."
+
+[common]
+reason = "Причина"
+not_persisted = "Запись сохранить не удалось."
+outside_bot = "выдан не через бота"
+no_reason = "без причины"
+inactive = " (неактивно)"
+history = "**История:**"
+more = "…и ещё {count}."
+record = "#{id} {created} от {moderator}: {reason}{state}"
+
+[warn]
+title = "Предупреждение #{id}"
+issued = "{member} получает предупреждение."
+active = "Активных предупреждений"
+limit_reached = "Достигнут лимит"
+limit_muted = "Мут до {until}, предупреждения сняты."
+limit_muted_kept = "Мут до {until}, но снять предупреждения не удалось."
+limit_mute_failed = "Замутить не удалось. {forbidden}"
+not_found_title = "Предупреждение не найдено"
+not_found = "У {member} нет предупреждения #{id}."
+removed_title = "Предупреждение снято"
+removed = "#{id} снято с {member}."
+list_title = "Предупреждения"
+none = "У {member} нет предупреждений."
+member = "Участник: {member}"
+cleared_title = "Предупреждения сняты"
+cleared = "Снято предупреждений с {member}: {count}."
+
+[mute]
+title = "Мут"
+issued = "{member} в муте до {until}."
+removed_title = "Мут снят"
+removed = "Мут с {member} снят."
+status_title = "Мут-статус"
+not_muted = "{member} не в муте."
+muted = "{member} в муте до {until}: {reason}"
+record = "#{id} {created} от {moderator} до {until}: {reason}{state}"
+
+[ban]
+title = "Бан"
+banned = "{user} забанен."
+not_banned = "{user} не забанен."
+removed_title = "Бан снят"
+removed = "{user} разбанен."
+active_title = "Активные баны"
+none_active = "Активных банов нет."
+list_title = "Баны"
+active_record = "{user} #{id} {created} от {moderator}: {reason}"
+outside_record = "{user}: {reason} ({outside})"
+
+[kick]
+title = "Кик"
+issued = "{member} выгнан с сервера."
+
+[clear]
+title = "Очистка"
+deleted = "Удалено сообщений: {count}."
+nothing = "Подходящих сообщений не найдено."
+reached_old = "Сообщения старше 14 дней Discord удалять пачкой не позволяет, поиск остановлен на них."
+
+[options]
+member = "Участник"
+user = "Пользователь"
+reason = "Причина"
+
+[commands.warn]
+description = "Выдать предупреждение"
+options.days = "Через сколько дней предупреждение истечёт"
+
+[commands.unwarn]
+description = "Снять предупреждение"
+options.warn_id = "Номер предупреждения"
+
+[commands.warns]
+description = "Предупреждения участника"
+
+[commands.clearwarns]
+description = "Удалить все предупреждения"
+
+[commands.mute]
+description = "Замутить участника (тайм-аут)"
+options.minutes = "Срок в минутах"
+
+[commands.unmute]
+description = "Снять мут"
+
+[commands.mutes]
+description = "Мут-статус и история мутов"
+
+[commands.ban]
+description = "Забанить участника"
+
+[commands.unban]
+description = "Разбанить пользователя"
+
+[commands.bans]
+description = "Список банов"
+options.user = "Показать все баны этого пользователя"
+
+[commands.kick]
+description = "Выгнать участника"
+
+[commands.clear]
+description = "Удалить сообщения в канале"
+options.amount = "Сколько сообщений удалить"
+options.user = "Только сообщения этого пользователя"
+options.bots = "Только сообщения ботов"
+options.contains = "Только сообщения с этим текстом"
+options.links = "Только сообщения со ссылками"
+options.attachments = "Только сообщения с вложениями"

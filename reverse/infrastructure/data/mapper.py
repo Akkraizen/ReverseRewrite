@@ -1,0 +1,6 @@
+from typing import Protocol
+
+
+class Mapper[DOMAIN, SCHEMA](Protocol):
+    def _to_schema(self, domain: DOMAIN) -> SCHEMA: ...
+    def _to_domain(self, schema: SCHEMA) -> DOMAIN: ...
